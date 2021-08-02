@@ -30,7 +30,7 @@
 		92177D3324F5C52700AD45C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92454B9324F4F3A50068C227 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		92454B9524F574B60068C227 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
-		9294239824F2912B008B6B28 /* rideShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rideShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9294239824F2912B008B6B28 /* Bike Share App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bike Share App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9294239B24F2912B008B6B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9294239D24F2912B008B6B28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9294239F24F2912B008B6B28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		9294239924F2912B008B6B28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9294239824F2912B008B6B28 /* rideShare.app */,
+				9294239824F2912B008B6B28 /* Bike Share App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			);
 			name = work;
 			productName = work;
-			productReference = 9294239824F2912B008B6B28 /* rideShare.app */;
+			productReference = 9294239824F2912B008B6B28 /* Bike Share App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -396,8 +396,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = home.rideShare;
-				PRODUCT_NAME = rideShare;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.bike-share";
+				PRODUCT_NAME = "Bike Share App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,8 +415,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = home.rideShare;
-				PRODUCT_NAME = rideShare;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.bike-share";
+				PRODUCT_NAME = "Bike Share App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

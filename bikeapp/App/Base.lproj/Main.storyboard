@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rideShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
         <!--Name View Controller-->
         <scene sceneID="qek-I9-qD0">
             <objects>
-                <viewController storyboardIdentifier="nameVC" id="tVs-i6-VXa" customClass="NameViewController" customModule="rideShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nameVC" id="tVs-i6-VXa" customClass="NameViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJk-SC-uYK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@
         <!--Email View Controller-->
         <scene sceneID="GF0-Fq-7to">
             <objects>
-                <viewController storyboardIdentifier="emailVC" id="1RI-Mp-GLN" customClass="EmailViewController" customModule="rideShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emailVC" id="1RI-Mp-GLN" customClass="EmailViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZw-gt-EYn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
         <!--Password View Controller-->
         <scene sceneID="lf9-At-PAO">
             <objects>
-                <viewController storyboardIdentifier="passwordVC" id="DhD-oS-A2d" customClass="PasswordViewController" customModule="rideShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordVC" id="DhD-oS-A2d" customClass="PasswordViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDO-0K-HrZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +246,7 @@
                                 <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-Um-Ngo" customClass="InputTextField" customModule="rideShare" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-Um-Ngo" customClass="InputTextField" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="28" y="130" width="359" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -303,7 +303,7 @@
         <!--Home View Controller-->
         <scene sceneID="ziE-lO-uQB">
             <objects>
-                <viewController storyboardIdentifier="mapVC" id="I0h-Ef-TTP" customClass="HomeViewController" customModule="rideShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapVC" id="I0h-Ef-TTP" customClass="HomeViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PaI-dk-rQ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
