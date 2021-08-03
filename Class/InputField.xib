@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputElement" customModule="Bike_Share_App" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YWW-an-UQ7">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Some text here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wla-WJ-1rQ">
+                    <rect key="frame" x="0.0" y="21" width="397" height="51"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd6-Mu-g7E">
+                    <rect key="frame" x="0.0" y="0.0" width="397" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qd6-Mu-g7E" secondAttribute="trailing" id="4P7-Lz-OhR"/>
+                <constraint firstItem="qd6-Mu-g7E" firstAttribute="leading" secondItem="YWW-an-UQ7" secondAttribute="leading" id="5e4-q9-7qF"/>
+                <constraint firstAttribute="top" secondItem="qd6-Mu-g7E" secondAttribute="top" id="Bc6-nQ-8ZF"/>
+                <constraint firstItem="wla-WJ-1rQ" firstAttribute="top" secondItem="qd6-Mu-g7E" secondAttribute="bottom" constant="4" id="Iry-Tb-lEK"/>
+                <constraint firstItem="wla-WJ-1rQ" firstAttribute="leading" secondItem="YWW-an-UQ7" secondAttribute="leading" id="Z6G-dF-XmY"/>
+                <constraint firstItem="wla-WJ-1rQ" firstAttribute="bottom" secondItem="YWW-an-UQ7" secondAttribute="bottom" id="aqc-8L-NV5"/>
+                <constraint firstAttribute="trailing" secondItem="wla-WJ-1rQ" secondAttribute="trailing" id="ezy-QJ-vpv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="161.59420289855075" y="-654.24107142857144"/>
+        </view>
+    </objects>
+</document>
