@@ -10,34 +10,37 @@ import UIKit
 
 class EmailViewController: UIViewController {
 
-    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var emailInputView: InputFieldView!
     @IBOutlet var proceedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.delegate = self
+        emailInputView.returnDelegate = self
+        emailInputView.setKeyboard(type: .emailAddress)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        emailTextField.becomeFirstResponder()
+        emailInputView.becomeFirstResponder()
     }
 
     @IBAction func didbTapProceedButton() {
         if isInputDataValid() {
             proceedToNextView()
         } else {
-            displayError()
+            emailInputView.setError(text: nil)
         }
     }
-
+    
     private func isInputDataValid() -> Bool {
-        guard let emailText = emailTextField?.text else { return false }
+        guard let emailText = emailInputView?.getText() else { return false }
         return isValidEmail(email: emailText)
     }
 
-    private func displayError() {
-        emailTextField.setState(.error)
+    private func proceedToNextView() {
+        let nextViewController = storyboard?.instantiateViewController(identifier: "passwordVC") as! PasswordViewController
+        nextViewController.modalPresentationStyle = .fullScreen
+        present(nextViewController, animated: true)
     }
 
     private func isValidEmail(email: String) -> Bool {
@@ -45,27 +48,12 @@ class EmailViewController: UIViewController {
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailPattern)
         return emailPredicate.evaluate(with: email)
     }
-    
-    func proceedToNextView() {
-        let nextViewController = storyboard?.instantiateViewController(identifier: "passwordVC") as! PasswordViewController
-        nextViewController.modalPresentationStyle = .fullScreen
-        present(nextViewController, animated: true)
-    }
 }
 
-extension EmailViewController: UITextFieldDelegate {
+extension EmailViewController: InputFieldDelegate {
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        emailTextField.resignFirstResponder()
+    func textFieldReturn(_ input: InputFieldView) {
+        input.resignFirstResponder()
         proceedButton.sendActions(for: .touchUpInside)
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        emailTextField.setState(.active)
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        emailTextField.setState(.regular)
     }
 }

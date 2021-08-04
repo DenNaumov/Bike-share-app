@@ -59,8 +59,17 @@ extension InputFieldView: UITextFieldDelegate {
 }
 
 extension InputFieldView {
+    
+    func setKeyboard(type: UIKeyboardType) {
+        textField.keyboardType = type
+    }
+    
+    func getText() -> String {
+        guard let text = textField.text else { fatalError() }
+        return text
+    }
 
-    func setError() {
+    func setError(text: String?) {
         textField.setState(.error)
     }
     
@@ -70,6 +79,7 @@ extension InputFieldView {
     }
     
     override func becomeFirstResponder() -> Bool {
+    @discardableResult override func becomeFirstResponder() -> Bool {
         super.becomeFirstResponder()
         return textField.becomeFirstResponder()
     }

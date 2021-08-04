@@ -208,7 +208,7 @@
                                 <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-CA-lDB" userLabel="Email Input">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-CA-lDB" userLabel="Email Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="94" width="374" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzc-uy-T8G">
@@ -265,7 +265,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="owO-UL-Pvs"/>
                     <connections>
-                        <outlet property="emailTextField" destination="iAK-KQ-SIf" id="lLD-0d-Zu6"/>
+                        <outlet property="emailInputView" destination="hN9-CA-lDB" id="FQ3-Va-IzE"/>
                         <outlet property="proceedButton" destination="d2l-BD-frW" id="sZW-96-XcI"/>
                     </connections>
                 </viewController>
@@ -290,7 +290,7 @@
                                 <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-fa-3bE" userLabel="Password Input">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-fa-3bE" userLabel="Password Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="94" width="374" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-8G-xxc">
@@ -378,7 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XLF-xH-TIW"/>
                     <connections>
-                        <outlet property="passwordTextField" destination="wPA-Um-Ngo" id="xbl-uK-HwI"/>
+                        <outlet property="passwordInputView" destination="2TT-fa-3bE" id="PV3-1C-Gua"/>
                         <outlet property="proceedButton" destination="UyY-Aw-BdN" id="c8O-L6-K8B"/>
                     </connections>
                 </viewController>

@@ -10,30 +10,30 @@ import UIKit
 
 class PasswordViewController: UIViewController {
 
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var passwordInputView: InputFieldView!
     @IBOutlet var proceedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTextField.delegate = self
+        passwordInputView.returnDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        passwordTextField.becomeFirstResponder()
+        passwordInputView.becomeFirstResponder()
     }
 
     @IBAction func didTapProceedButton() {
         if isInputDataValid() {
             proceedToNextView()
         } else {
-            passwordTextField.setState(.error)
+            passwordInputView.setError(text: nil)
         }
     }
 
     private func isInputDataValid() -> Bool {
-        guard let text = passwordTextField.text else { return false }
-        return text.count > 6
+        let text = passwordInputView.getText()
+        return !passwordInputView.isInputEmpty() && text.count > 6
     }
 
     private func proceedToNextView() {
@@ -43,19 +43,10 @@ class PasswordViewController: UIViewController {
     }
 }
 
-extension PasswordViewController: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        passwordTextField.setState(.active)
-    }
+extension PasswordViewController: InputFieldDelegate {
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        passwordTextField.setState(.regular)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        passwordTextField.resignFirstResponder()
+    func textFieldReturn(_ input: InputFieldView) {
+        passwordInputView.resignFirstResponder()
         proceedButton.sendActions(for: .touchUpInside)
-        return true
     }
 }
