@@ -10,33 +10,36 @@ import UIKit
 
 class NameViewController: UIViewController {
     
-    @IBOutlet var firstNameTextField: UITextField!
-    @IBOutlet var secondNameTextField: UITextField!
+    @IBOutlet weak var firstNameInputView: InputFieldView!
+    @IBOutlet weak var secondNameInputView: InputFieldView!
     @IBOutlet var proceedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTexFields()
+
+        setupInputFields()
     }
     
-    private func setupTexFields() {
-        firstNameTextField.delegate = self
-        secondNameTextField.delegate = self
+    private func setupInputFields() {
+        firstNameInputView.label.text = "First Name"
+        secondNameInputView.label.text = "Second Name"
+        firstNameInputView.returnDelegate = self
+        secondNameInputView.returnDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        firstNameTextField.becomeFirstResponder()
+        firstNameInputView.becomeFirstResponder()
     }
 
     @IBAction func didTapProceedButton() {
         var isTransitionAllowed = true
         if !isFirstNameInputDataValid() {
-            firstNameTextField.setState(.error)
+            firstNameInputView.setError()
             isTransitionAllowed = false
         }
         if !isSecondNameInputDataValid() {
-            secondNameTextField.setState(.error)
+            secondNameInputView.setError()
             isTransitionAllowed = false
         }
         if isTransitionAllowed {
@@ -45,13 +48,11 @@ class NameViewController: UIViewController {
     }
 
     private func isFirstNameInputDataValid() -> Bool {
-        guard let firstNameText = firstNameTextField.text else { return false }
-        return !firstNameText.isEmpty
+        return !firstNameInputView.isInputEmpty()
     }
 
     private func isSecondNameInputDataValid() -> Bool {
-        guard let secondNameText = secondNameTextField.text else { return false }
-        return !secondNameText.isEmpty
+        return !secondNameInputView.isInputEmpty()
     }
 
     private func proceedToNextView() {
@@ -61,25 +62,15 @@ class NameViewController: UIViewController {
     }
 }
 
-extension NameViewController: UITextFieldDelegate {
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == firstNameTextField {
-            textField.resignFirstResponder()
-            secondNameTextField.becomeFirstResponder()
-            secondNameTextField.keyboardType = .emailAddress
-        } else if textField == secondNameTextField {
-            textField.resignFirstResponder()
+extension NameViewController: InputFieldDelegate {
+    
+    func textFieldReturn(_ input: InputFieldView) {
+        if input == firstNameInputView {
+            firstNameInputView.resignFirstResponder()
+            secondNameInputView.becomeFirstResponder()
+        } else if input == secondNameInputView {
+            secondNameInputView.resignFirstResponder()
             proceedButton.sendActions(for: .touchUpInside)
         }
-        return true
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.setState(.active)
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.setState(.regular)
     }
 }
