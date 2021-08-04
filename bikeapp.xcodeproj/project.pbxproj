@@ -17,7 +17,7 @@
 		92454B9624F574B60068C227 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92454B9524F574B60068C227 /* EmailViewController.swift */; };
 		9294239C24F2912B008B6B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294239B24F2912B008B6B28 /* AppDelegate.swift */; };
 		9294239E24F2912B008B6B28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294239D24F2912B008B6B28 /* SceneDelegate.swift */; };
-		929423A024F2912B008B6B28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294239F24F2912B008B6B28 /* ViewController.swift */; };
+		929423A024F2912B008B6B28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294239F24F2912B008B6B28 /* MainViewController.swift */; };
 		929423A524F29130008B6B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929423A424F29130008B6B28 /* Assets.xcassets */; };
 		929423A824F29130008B6B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929423A624F29130008B6B28 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -35,7 +35,7 @@
 		9294239824F2912B008B6B28 /* Bike Share App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bike Share App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9294239B24F2912B008B6B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9294239D24F2912B008B6B28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9294239F24F2912B008B6B28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9294239F24F2912B008B6B28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		929423A224F2912B008B6B28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		929423A424F29130008B6B28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		929423A724F29130008B6B28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		9205D5AF25012E250063DC2E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9294239F24F2912B008B6B28 /* ViewController.swift */,
+				9294239F24F2912B008B6B28 /* MainViewController.swift */,
 				92454B9324F4F3A50068C227 /* NameViewController.swift */,
 				92454B9524F574B60068C227 /* EmailViewController.swift */,
 				92177D3124F5B72F00AD45C6 /* PasswordViewController.swift */,
@@ -86,8 +86,8 @@
 		9205D5B025012E410063DC2E /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				922DCA5626B77897009BB3D6 /* InputField.xib */,
 				92039FC124FD52E6002A0637 /* InputField.swift */,
+				922DCA5626B77897009BB3D6 /* InputField.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929423A024F2912B008B6B28 /* ViewController.swift in Sources */,
+				929423A024F2912B008B6B28 /* MainViewController.swift in Sources */,
 				9294239C24F2912B008B6B28 /* AppDelegate.swift in Sources */,
 				9294239E24F2912B008B6B28 /* SceneDelegate.swift in Sources */,
 				92454B9424F4F3A50068C227 /* NameViewController.swift in Sources */,
