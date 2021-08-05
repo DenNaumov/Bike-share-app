@@ -15,6 +15,7 @@ class PasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordInputView.setLabel(text: "Password")
         passwordInputView.returnDelegate = self
     }
 

@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="Bike_Share_App" customModuleProvider="target">
             <connections>
+                <outlet property="errorText" destination="AQL-5e-iBE" id="nms-Zt-sLB"/>
                 <outlet property="label" destination="j3x-2K-slr" id="d36-NB-Tbc"/>
                 <outlet property="textField" destination="H0T-SR-lnJ" id="AhJ-jb-HrE"/>
             </connections>
@@ -30,14 +31,23 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQL-5e-iBE" userLabel="Error label">
+                    <rect key="frame" x="0.0" y="79" width="360" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <constraints>
+                <constraint firstItem="AQL-5e-iBE" firstAttribute="top" secondItem="H0T-SR-lnJ" secondAttribute="bottom" constant="4" id="AVT-G7-Qgf"/>
                 <constraint firstItem="j3x-2K-slr" firstAttribute="top" secondItem="Ccb-R1-jPk" secondAttribute="top" id="YD0-QD-gjo"/>
+                <constraint firstAttribute="trailing" secondItem="AQL-5e-iBE" secondAttribute="trailing" id="d7G-2K-v03"/>
                 <constraint firstAttribute="trailing" secondItem="H0T-SR-lnJ" secondAttribute="trailing" id="dtC-g8-ddf"/>
                 <constraint firstItem="H0T-SR-lnJ" firstAttribute="top" secondItem="j3x-2K-slr" secondAttribute="bottom" constant="4" id="ehS-gK-ish"/>
                 <constraint firstAttribute="trailing" secondItem="j3x-2K-slr" secondAttribute="trailing" id="eim-KV-iio"/>
                 <constraint firstAttribute="bottom" secondItem="H0T-SR-lnJ" secondAttribute="bottom" id="hbx-Rt-ohG"/>
+                <constraint firstItem="AQL-5e-iBE" firstAttribute="leading" secondItem="Ccb-R1-jPk" secondAttribute="leading" id="one-Qh-poR"/>
                 <constraint firstItem="H0T-SR-lnJ" firstAttribute="leading" secondItem="Ccb-R1-jPk" secondAttribute="leading" id="rge-Yl-wAX"/>
                 <constraint firstItem="j3x-2K-slr" firstAttribute="leading" secondItem="Ccb-R1-jPk" secondAttribute="leading" id="rnf-Gs-ff2"/>
             </constraints>

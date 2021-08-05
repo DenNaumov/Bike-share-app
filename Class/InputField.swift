@@ -14,8 +14,9 @@ protocol InputFieldDelegate {
 
 class InputFieldView: UIView {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var errorText: UILabel!
     let nibName = "InputField"
     var returnDelegate: InputFieldDelegate? = nil
 
@@ -60,6 +61,10 @@ extension InputFieldView: UITextFieldDelegate {
 
 extension InputFieldView {
     
+    func setLabel(text: String) {
+        label.text = text
+    }
+    
     func setKeyboard(type: UIKeyboardType) {
         textField.keyboardType = type
     }
@@ -71,14 +76,16 @@ extension InputFieldView {
 
     func setError(text: String?) {
         textField.setState(.error)
+        if let text = text {
+            errorText.text = text
+        }
     }
     
-    func isInputEmpty() -> Bool {
+    func isInputText() -> Bool {
         guard let text = textField.text else { return false }
-        return text.isEmpty
+        return !text.isEmpty
     }
     
-    override func becomeFirstResponder() -> Bool {
     @discardableResult override func becomeFirstResponder() -> Bool {
         super.becomeFirstResponder()
         return textField.becomeFirstResponder()
@@ -119,3 +126,4 @@ private extension UITextField {
         layer.borderWidth = 1
     }
 }
+//}

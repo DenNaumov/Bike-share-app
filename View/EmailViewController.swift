@@ -15,6 +15,7 @@ class EmailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         emailInputView.returnDelegate = self
         emailInputView.setKeyboard(type: .emailAddress)
     }

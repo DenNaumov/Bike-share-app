@@ -19,14 +19,14 @@ class NameViewController: UIViewController {
 
         setupInputFields()
     }
-    
+
     private func setupInputFields() {
-        firstNameInputView.label.text = "First Name"
-        secondNameInputView.label.text = "Second Name"
+        firstNameInputView.setLabel(text: "First Name")
+        secondNameInputView.setLabel(text: "Second Name")
         firstNameInputView.returnDelegate = self
         secondNameInputView.returnDelegate = self
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         firstNameInputView.becomeFirstResponder()
