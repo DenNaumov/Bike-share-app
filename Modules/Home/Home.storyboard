@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNl-5e-qen">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Hv1-9Q-AiY">
+            <objects>
+                <viewController storyboardIdentifier="mapVC" id="LNl-5e-qen" customClass="HomeViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JAt-xS-Eur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAh-l6-uXr" userLabel="Main Container View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0o-aN-unR" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-k1-rcV" userLabel="Control Buttons Container View">
+                                        <rect key="frame" x="32" y="738" width="350" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iY-Sl-Iof" userLabel="Profile Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="HKn-pH-E6f"/>
+                                                    <constraint firstAttribute="height" constant="48" id="aVV-lp-PLK"/>
+                                                </constraints>
+                                                <state key="normal" image="settings"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="userSettingsButtonPress:" destination="LNl-5e-qen" eventType="touchUpInside" id="DYq-sh-TLg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAo-gI-cKn">
+                                                <rect key="frame" x="81" y="0.0" width="188" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Scan to unlock" image="barcode.viewfinder" catalog="system">
+                                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r9-FC-I6z" userLabel="Location Button">
+                                                <rect key="frame" x="302" y="0.0" width="48" height="48"/>
+                                                <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="48" id="8LP-nb-3e9"/>
+                                                    <constraint firstAttribute="height" constant="48" id="yec-63-omq"/>
+                                                </constraints>
+                                                <state key="normal" image="location"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onLocationButtonPress:" destination="LNl-5e-qen" eventType="touchUpInside" id="wlG-eb-co4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="s0o-aN-unR" firstAttribute="leading" secondItem="FAh-l6-uXr" secondAttribute="leading" id="0Jj-69-zP6"/>
+                                    <constraint firstAttribute="bottom" secondItem="s0o-aN-unR" secondAttribute="bottom" id="CrC-kv-oGJ"/>
+                                    <constraint firstItem="i4W-k1-rcV" firstAttribute="leading" secondItem="FAh-l6-uXr" secondAttribute="leading" constant="32" id="R6S-le-MTN"/>
+                                    <constraint firstAttribute="trailing" secondItem="i4W-k1-rcV" secondAttribute="trailing" constant="32" id="b9f-W1-iG6"/>
+                                    <constraint firstAttribute="bottom" secondItem="i4W-k1-rcV" secondAttribute="bottom" constant="32" id="csx-Q9-LsN"/>
+                                    <constraint firstAttribute="trailing" secondItem="s0o-aN-unR" secondAttribute="trailing" id="qau-wW-gN9"/>
+                                    <constraint firstItem="s0o-aN-unR" firstAttribute="top" secondItem="FAh-l6-uXr" secondAttribute="top" id="yzP-Yw-1hr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wcN-SE-l73"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FAh-l6-uXr" firstAttribute="top" secondItem="wcN-SE-l73" secondAttribute="top" id="bCq-CA-CP5"/>
+                            <constraint firstItem="FAh-l6-uXr" firstAttribute="leading" secondItem="wcN-SE-l73" secondAttribute="leading" id="eZI-lC-tRA"/>
+                            <constraint firstItem="wcN-SE-l73" firstAttribute="trailing" secondItem="FAh-l6-uXr" secondAttribute="trailing" id="rQi-cO-pqX"/>
+                            <constraint firstItem="wcN-SE-l73" firstAttribute="bottom" secondItem="FAh-l6-uXr" secondAttribute="bottom" id="w2M-z9-KdS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="s0o-aN-unR" id="zkf-GQ-WO6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyw-F0-KzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="location" width="10.5" height="10.5"/>
+        <image name="settings" width="12" height="12"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
