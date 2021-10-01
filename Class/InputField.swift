@@ -10,6 +10,7 @@ import UIKit
 
 protocol InputFieldDelegate {
     func textFieldReturn(_ input: InputFieldView) -> Void
+    func onTextChange(newValue: String)
 }
 
 class InputFieldView: UIView {
@@ -22,22 +23,22 @@ class InputFieldView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
+        initTextField()
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        initTextField()
     }
 
-    func commonInit() {
+    private func initTextField() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)
         textField.delegate = self
     }
 
-    func loadViewFromNib() -> UIView? {
+    private func loadViewFromNib() -> UIView? {
         let nib = UINib(nibName: nibName, bundle: nil)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
@@ -47,6 +48,14 @@ extension InputFieldView: UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.setState(.active)
+        removeError()
+    }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        textField.setState(.active)
+        returnDelegate?.onTextChange(newValue: string)
+        removeError()
+        return true
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -65,20 +74,28 @@ extension InputFieldView {
         label.text = text
     }
     
-    func setKeyboard(type: UIKeyboardType) {
+    func setKeyboardType(_ type: UIKeyboardType) {
         textField.keyboardType = type
+    }
+    
+    func hideTextEntry() {
+        textField.isSecureTextEntry = true
     }
     
     func getText() -> String {
         guard let text = textField.text else { fatalError() }
         return text
     }
-
+    
     func setError(text: String?) {
         textField.setState(.error)
         if let text = text {
             errorText.text = text
         }
+    }
+    
+    func removeError() {
+        errorText.text = ""
     }
     
     func isInputText() -> Bool {
@@ -117,13 +134,12 @@ private extension UITextField {
     }
 
     private func setRegular() {
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.green.cgColor
         layer.borderWidth = 0
     }
 
     private func setActive() {
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.green.cgColor
         layer.borderWidth = 1
     }
 }
-//}
