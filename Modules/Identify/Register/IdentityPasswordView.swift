@@ -11,11 +11,12 @@ import UIKit
 class PasswordViewController: UIViewController {
 
     @IBOutlet weak var passwordInputView: InputFieldView!
-    @IBOutlet var proceedButton: UIButton!
+    @IBOutlet weak var proceedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordInputView.setLabel(text: "Password")
+        passwordInputView.hideTextEntry()
         passwordInputView.returnDelegate = self
     }
 
@@ -23,28 +24,40 @@ class PasswordViewController: UIViewController {
         super.viewDidAppear(animated)
         passwordInputView.becomeFirstResponder()
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
+        return true
+    }
 
     @IBAction func didTapProceedButton() {
-        if isInputDataValid() {
-            proceedToNextView()
-        } else {
-            passwordInputView.setError(text: nil)
-        }
+
+    }
+    
+    func isCorrentInput(in input: InputFieldView) -> Bool {
+//        if let error = getInputValidationError(input: input) {
+//            input.setError(text: error)
+//            return false
+//        }
+        return true
     }
 
-    private func isInputDataValid() -> Bool {
+    private func getValidatetionError() -> String? {
         let text = passwordInputView.getText()
-        return !passwordInputView.isInputEmpty() && text.count > 6
-    }
-
-    private func proceedToNextView() {
-        let nextViewController = storyboard?.instantiateViewController(identifier: "mapVC") as! HomeViewController
-        nextViewController.modalPresentationStyle = .fullScreen
-        present(nextViewController, animated: true)
+        if !passwordInputView.isInputText() {
+            return "enter password"
+        } else if !(text.count > 6) {
+            return "password is too short"
+        }
+        return nil
     }
 }
 
 extension PasswordViewController: InputFieldDelegate {
+
+    func onTextChange(newValue: String) {
+        
+    }
 
     func textFieldReturn(_ input: InputFieldView) {
         passwordInputView.resignFirstResponder()
