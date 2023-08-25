@@ -14,13 +14,13 @@ class HomeViewController: UIViewController, VMToViewDelegate {
 
     @IBOutlet var mapView: GMSMapView!
 
-    let vm = HomeViewModel()
+    let viewModel = HomeViewModel()
     private let defaultZoomLevel: Float = 17.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm.viewDelegate = self
-        vm.checkLocationServices()
+        viewModel.viewDelegate = self
+        viewModel.checkLocationServices()
     }
 
     @IBAction func onLocationButtonPress(_ sender: Any) {
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController, VMToViewDelegate {
     }
 
     private func showUserLocationOnMap() {
-        vm.centerViewOnUserLocation()
+        viewModel.centerViewOnUserLocation()
 //        zoomToUser()
     }
 
@@ -52,6 +52,6 @@ class HomeViewController: UIViewController, VMToViewDelegate {
     }
 
     private func openUserProfile() {
-        vm.loadUserProfile()
+        viewModel.loadUserProfile()
     }
 }
