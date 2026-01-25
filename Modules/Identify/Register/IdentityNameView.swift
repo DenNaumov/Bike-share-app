@@ -19,9 +19,9 @@ class NameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nc = navigationController as! IdentifyNavigationController
-        vm = nc.viewModel
-
+        if let nc = navigationController as? IdentifyNavigationController {
+            vm = nc.viewModel
+        }
         setupInputFields()
     }
 
@@ -47,14 +47,8 @@ class NameViewController: UIViewController {
     }
 
     private func isTransitionAllowed() -> Bool {
-        let inputs = [firstNameInputView, secondNameInputView]
-        let incorrectInputsCount = inputs.filter { input in
-            !isCorrentInput(in: input!)
-        }.count
-        if (incorrectInputsCount > 0) {
-            return false
-        }
-        return true
+        let inputs = [firstNameInputView, secondNameInputView].compactMap { $0 }
+        return inputs.allSatisfy { isCorrentInput(in: $0) }
     }
 
     private func isCorrentInput(in input: InputFieldView) -> Bool {

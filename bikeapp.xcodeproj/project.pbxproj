@@ -465,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "home.bike-app";
 				PRODUCT_NAME = "Bike Share App";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -485,7 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "home.bike-app";
 				PRODUCT_NAME = "Bike Share App";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
