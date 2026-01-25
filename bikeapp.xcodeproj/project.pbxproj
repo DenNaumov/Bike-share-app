@@ -28,11 +28,11 @@
 		929423A824F29130008B6B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929423A624F29130008B6B28 /* LaunchScreen.storyboard */; };
 		92F01E262705818E00055DC0 /* Selector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F01E252705818D00055DC0 /* Selector.xib */; };
 		92F01E282705DBB400055DC0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F01E272705DBB400055DC0 /* HomeViewModel.swift */; };
+		BA0705FD0755DB0751B3D452 /* Pods_Bike_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2E95C0B6557870CF7C983A /* Pods_Bike_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06B302982B41201CB4A05FCF /* Pods-bikeapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.debug.xcconfig"; path = "Target Support Files/Pods-work/Pods-bikeapp.debug.xcconfig"; sourceTree = "<group>"; };
-		2A117BCEAB915EC54A004ECF /* Pods-bikeapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikeapp.release.xcconfig"; path = "Target Support Files/Pods-work/Pods-bikeapp.release.xcconfig"; sourceTree = "<group>"; };
+		8E2E95C0B6557870CF7C983A /* Pods_Bike_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bike_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92039FC124FD52E6002A0637 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		9208F2B426FCB9C800382CDB /* Profile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Profile.xib; sourceTree = "<group>"; };
 		9208F2B626FCBB6700382CDB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		929423A924F29130008B6B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92F01E252705818D00055DC0 /* Selector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Selector.xib; sourceTree = "<group>"; };
 		92F01E272705DBB400055DC0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A4B0DFC24D3F5951D93C4027 /* Pods-Bike App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bike App.debug.xcconfig"; path = "Target Support Files/Pods-Bike App/Pods-Bike App.debug.xcconfig"; sourceTree = "<group>"; };
+		B28E00E72CC412BD74BD1451 /* Pods-Bike App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bike App.release.xcconfig"; path = "Target Support Files/Pods-Bike App/Pods-Bike App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,24 +65,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0705FD0755DB0751B3D452 /* Pods_Bike_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50402DF1D9096B22A62FD9B1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		72F824D6D73FD35994E222ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				06B302982B41201CB4A05FCF /* Pods-bikeapp.debug.xcconfig */,
-				2A117BCEAB915EC54A004ECF /* Pods-bikeapp.release.xcconfig */,
+				A4B0DFC24D3F5951D93C4027 /* Pods-Bike App.debug.xcconfig */,
+				B28E00E72CC412BD74BD1451 /* Pods-Bike App.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -137,7 +133,7 @@
 				9205D5AF25012E250063DC2E /* Modules */,
 				9294239924F2912B008B6B28 /* Products */,
 				72F824D6D73FD35994E222ED /* Pods */,
-				50402DF1D9096B22A62FD9B1 /* Frameworks */,
+				EF9E024DCE43BBEF1207D3AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +168,14 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		EF9E024DCE43BBEF1207D3AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E2E95C0B6557870CF7C983A /* Pods_Bike_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,11 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 929423AC24F29130008B6B28 /* Build configuration list for PBXNativeTarget "Bike App" */;
 			buildPhases = (
-				513D1EF9E25BAD0A82F898CF /* [CP] Check Pods Manifest.lock */,
+				E5CB2437AE85AD0B36AC28CB /* [CP] Check Pods Manifest.lock */,
 				9294239424F2912B008B6B28 /* Sources */,
 				9294239524F2912B008B6B28 /* Frameworks */,
 				9294239624F2912B008B6B28 /* Resources */,
-				95DA4CB823CE45AEAF8B49ED /* [CP] Copy Pods Resources */,
+				3F45980DFE18C07DF365CD86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +250,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		513D1EF9E25BAD0A82F898CF /* [CP] Check Pods Manifest.lock */ = {
+		3F45980DFE18C07DF365CD86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bike App/Pods-Bike App-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bike App/Pods-Bike App-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bike App/Pods-Bike App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CB2437AE85AD0B36AC28CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,28 +282,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-work-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bike App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95DA4CB823CE45AEAF8B49ED /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-work/Pods-work-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-work/Pods-work-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-work/Pods-work-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -448,7 +452,7 @@
 		};
 		929423AD24F29130008B6B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B302982B41201CB4A05FCF /* Pods-bikeapp.debug.xcconfig */;
+			baseConfigurationReference = A4B0DFC24D3F5951D93C4027 /* Pods-Bike App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,7 +472,7 @@
 		};
 		929423AE24F29130008B6B28 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A117BCEAB915EC54A004ECF /* Pods-bikeapp.release.xcconfig */;
+			baseConfigurationReference = B28E00E72CC412BD74BD1451 /* Pods-Bike App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
