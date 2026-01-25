@@ -43,18 +43,16 @@ class HomeViewModel: NSObject {
     }
 
     private func checkLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedWhenInUse:
+        switch locationManager.authorizationStatus {
+        case .authorizedWhenInUse, .authorizedAlways:
             viewDelegate?.setupGMSCamera()
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
-            break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+        case .denied, .restricted:
             break
-        case .denied:
-            break
-        default:
+        @unknown default:
             break
         }
     }
@@ -66,8 +64,8 @@ extension HomeViewModel: CLLocationManagerDelegate {
         centerViewOnUserLocation()
     }
 
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkLocationAuthorization()
     }
 
     func centerViewOnUserLocation() {
