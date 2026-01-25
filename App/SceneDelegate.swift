@@ -16,12 +16,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let storyboardName = hasUserCredentials() ? "Home" : "Identify"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         guard let rootVC = storyboard.instantiateInitialViewController() else {
-            preconditionFailure("Home.storyboard: не задан initial view controller.")
+            preconditionFailure("\(storyboardName).storyboard: не задан initial view controller.")
         }
 
         window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
+    }
+
+    private func hasUserCredentials() -> Bool {
+        return false
     }
 }

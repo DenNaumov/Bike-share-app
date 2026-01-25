@@ -82,9 +82,8 @@ extension InputFieldView {
         textField.isSecureTextEntry = true
     }
     
-    func getText() -> String {
-        guard let text = textField.text else { fatalError() }
-        return text
+    func getText() -> String? {
+        return textField.text
     }
     
     func setError(text: String?) {

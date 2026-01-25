@@ -55,11 +55,8 @@ class EmailViewController: UIViewController {
     }
     
     func isCorrectInput(input: InputFieldView) -> Bool {
-        guard let emailText = emailInputView?.getText() else { fatalError() }
-        if viewModel.isValidEmail(emailText) {
-            return true
-        }
-        return false
+        guard let emailText = emailInputView?.getText(), !emailText.isEmpty else { return false }
+        return viewModel.isValidEmail(emailText)
     }
 }
 

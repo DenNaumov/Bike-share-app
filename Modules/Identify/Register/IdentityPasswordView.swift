@@ -43,10 +43,10 @@ class PasswordViewController: UIViewController {
     }
 
     private func getValidatetionError() -> String? {
-        let text = passwordInputView.getText()
-        if !passwordInputView.isInputText() {
+        guard let text = passwordInputView.getText(), !text.isEmpty else {
             return "enter password"
-        } else if !(text.count > 6) {
+        }
+        if text.count <= 6 {
             return "password is too short"
         }
         return nil

@@ -12,10 +12,10 @@ class RootRouter: UIViewController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        if (hasUserCredentials()) {
+        if hasUserCredentials() {
             initiateMainVC()
         } else {
-            initiateIndetifyVC()
+            initiateIdentifyVC()
         }
     }
 
@@ -25,14 +25,18 @@ class RootRouter: UIViewController {
 
     func initiateMainVC() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()
-        present(vc!, animated: false)
+        guard let vc = storyboard.instantiateInitialViewController() else {
+            preconditionFailure("RootRouter: Home.storyboard — не задан initial view controller.")
+        }
+        present(vc, animated: false)
     }
 
-    func initiateIndetifyVC() {
+    func initiateIdentifyVC() {
         let storyboard = UIStoryboard(name: "Identify", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()
-        show(vc!, sender: nil)
+        guard let vc = storyboard.instantiateInitialViewController() else {
+            preconditionFailure("RootRouter: Identify.storyboard — не задан initial view controller.")
+        }
+        show(vc, sender: nil)
     }
 
     func hasUserCredentials() -> Bool {
