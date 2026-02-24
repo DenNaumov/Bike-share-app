@@ -86,6 +86,9 @@ extension InputFieldView {
     
     func hideTextEntry() {
         textField.isSecureTextEntry = true
+        textField.textContentType = .password
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
     }
     
     func getText() -> String? {
