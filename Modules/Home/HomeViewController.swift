@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import CoreLocation
 import GoogleMaps
 
@@ -52,6 +53,10 @@ class HomeViewController: UIViewController, VMToViewDelegate {
     }
 
     private func openUserProfile() {
-        viewModel.loadUserProfile()
+        let settingsView = SettingsView(onDismiss: { [weak self] in
+            self?.dismiss(animated: true)
+        })
+        let hosting = UIHostingController(rootView: settingsView)
+        present(hosting, animated: true)
     }
 }
