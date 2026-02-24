@@ -17,9 +17,14 @@ protocol VMToViewDelegate: AnyObject {
 
 class HomeViewModel: NSObject {
 
-    let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager
 
     weak var viewDelegate: VMToViewDelegate?
+
+    init(locationManager: CLLocationManager = CLLocationManager()) {
+        self.locationManager = locationManager
+        super.init()
+    }
 
     func onUserRequestSettings() {
         // TODO: open user profile

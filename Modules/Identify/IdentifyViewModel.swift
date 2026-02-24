@@ -15,10 +15,33 @@ enum InputItem {
     case password
 }
 
+protocol IdentifyStore {
+    func set(_ value: String, for item: InputItem)
+    func value(for item: InputItem) -> String?
+}
+
+final class InMemoryIdentifyStore: IdentifyStore {
+    private var values = [InputItem: String]()
+
+    func set(_ value: String, for item: InputItem) {
+        values[item] = value
+    }
+
+    func value(for item: InputItem) -> String? {
+        values[item]
+    }
+}
+
 class IdentifyViewModel: NSObject {
 
-    var values = [InputItem: String]()
+    private let store: IdentifyStore
+
+    init(store: IdentifyStore = InMemoryIdentifyStore()) {
+        self.store = store
+        super.init()
+    }
+
     func updateValue(for item: InputItem, text: String) {
-        values[item] = text
+        store.set(text, for: item)
     }
 }
