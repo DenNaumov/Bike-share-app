@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="Bike_Share_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
             <connections>
                 <outlet property="errorText" destination="AQL-5e-iBE" id="nms-Zt-sLB"/>
                 <outlet property="label" destination="j3x-2K-slr" id="d36-NB-Tbc"/>

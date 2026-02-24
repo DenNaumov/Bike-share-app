@@ -104,62 +104,11 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ydy-H2-2yg" userLabel="First name input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="144" width="374" height="58"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHK-l8-6zC">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="Oo4-Lz-fJ5"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8o-N2-Ku9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="bHK-l8-6zC" secondAttribute="trailing" id="5Sn-m6-gjt"/>
-                                    <constraint firstAttribute="bottom" secondItem="bHK-l8-6zC" secondAttribute="bottom" id="a4x-n0-Zbu"/>
-                                    <constraint firstItem="p8o-N2-Ku9" firstAttribute="top" secondItem="Ydy-H2-2yg" secondAttribute="top" id="atJ-uz-Vcu"/>
-                                    <constraint firstItem="p8o-N2-Ku9" firstAttribute="leading" secondItem="Ydy-H2-2yg" secondAttribute="leading" id="bxT-5q-TZc"/>
-                                    <constraint firstItem="bHK-l8-6zC" firstAttribute="top" secondItem="p8o-N2-Ku9" secondAttribute="bottom" constant="4" id="ga7-AE-49g"/>
-                                    <constraint firstAttribute="trailing" secondItem="p8o-N2-Ku9" secondAttribute="trailing" id="mDz-Ex-ut9"/>
-                                    <constraint firstItem="bHK-l8-6zC" firstAttribute="leading" secondItem="Ydy-H2-2yg" secondAttribute="leading" id="rp9-u8-gHq"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-qm-sDK" userLabel="Second name input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="226" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoF-Lg-H6S">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bnj-yh-Jez">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Bnj-yh-Jez" secondAttribute="trailing" id="3MV-Ou-noF"/>
-                                    <constraint firstItem="Bnj-yh-Jez" firstAttribute="top" secondItem="MoF-Lg-H6S" secondAttribute="bottom" constant="4" id="5Qh-oX-b6w"/>
-                                    <constraint firstAttribute="trailing" secondItem="MoF-Lg-H6S" secondAttribute="trailing" id="9N5-Ty-CR4"/>
-                                    <constraint firstItem="MoF-Lg-H6S" firstAttribute="top" secondItem="XAQ-qm-sDK" secondAttribute="top" id="DCL-gZ-E9e"/>
-                                    <constraint firstItem="Bnj-yh-Jez" firstAttribute="leading" secondItem="XAQ-qm-sDK" secondAttribute="leading" id="WNl-Jw-Pul"/>
-                                    <constraint firstItem="MoF-Lg-H6S" firstAttribute="leading" secondItem="XAQ-qm-sDK" secondAttribute="leading" id="eRQ-YJ-1S0"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bnj-yh-Jez" secondAttribute="bottom" id="wXG-HB-Pq2"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-jm-ia3">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
@@ -189,7 +138,6 @@
                             <constraint firstItem="Ydy-H2-2yg" firstAttribute="top" secondItem="Ecn-bl-4YQ" secondAttribute="bottom" constant="24" id="47X-zV-96r"/>
                             <constraint firstItem="Ecn-bl-4YQ" firstAttribute="top" secondItem="ZVF-O2-nIX" secondAttribute="top" constant="40" id="IzP-Vt-1jd"/>
                             <constraint firstItem="ZVF-O2-nIX" firstAttribute="trailing" secondItem="XAQ-qm-sDK" secondAttribute="trailing" constant="20" id="JGp-pR-9U9"/>
-                            <constraint firstItem="XAQ-qm-sDK" firstAttribute="top" secondItem="bHK-l8-6zC" secondAttribute="bottom" constant="24" id="Jsh-CL-48Q"/>
                             <constraint firstItem="ZVF-O2-nIX" firstAttribute="bottom" secondItem="ccF-jm-ia3" secondAttribute="bottom" constant="40" id="NWZ-rl-EJW"/>
                             <constraint firstItem="ZVF-O2-nIX" firstAttribute="trailing" secondItem="ccF-jm-ia3" secondAttribute="trailing" constant="40" id="Tqr-61-12d"/>
                             <constraint firstItem="Ecn-bl-4YQ" firstAttribute="leading" secondItem="ZVF-O2-nIX" secondAttribute="leading" constant="20" id="XAX-el-zEQ"/>
@@ -229,31 +177,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-CA-lDB" userLabel="Login Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzc-uy-T8G">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAK-KQ-SIf">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="iAK-KQ-SIf" secondAttribute="bottom" id="0oi-No-pSy"/>
-                                    <constraint firstItem="wzc-uy-T8G" firstAttribute="top" secondItem="hN9-CA-lDB" secondAttribute="top" id="ErY-Sa-FMj"/>
-                                    <constraint firstAttribute="trailing" secondItem="wzc-uy-T8G" secondAttribute="trailing" id="HQv-GX-Yw5"/>
-                                    <constraint firstAttribute="trailing" secondItem="iAK-KQ-SIf" secondAttribute="trailing" id="TXJ-ix-6aX"/>
-                                    <constraint firstItem="wzc-uy-T8G" firstAttribute="leading" secondItem="hN9-CA-lDB" secondAttribute="leading" id="hnB-2L-aEp"/>
-                                    <constraint firstItem="iAK-KQ-SIf" firstAttribute="leading" secondItem="hN9-CA-lDB" secondAttribute="leading" id="sXC-KI-wux"/>
-                                    <constraint firstItem="iAK-KQ-SIf" firstAttribute="top" secondItem="wzc-uy-T8G" secondAttribute="bottom" constant="4" id="tm3-ht-24Q"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-BD-frW">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
@@ -307,59 +231,11 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-fa-3bE" userLabel="Password Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-8G-xxc">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPA-Um-Ngo" customClass="InputTextField" customModule="Bike_Share_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstItem="wPA-Um-Ngo" firstAttribute="top" secondItem="X9V-8G-xxc" secondAttribute="bottom" constant="4" id="339-Im-Dwd"/>
-                                    <constraint firstAttribute="trailing" secondItem="X9V-8G-xxc" secondAttribute="trailing" id="aEp-GG-qzN"/>
-                                    <constraint firstItem="wPA-Um-Ngo" firstAttribute="leading" secondItem="2TT-fa-3bE" secondAttribute="leading" id="eV1-E5-7tc"/>
-                                    <constraint firstAttribute="bottom" secondItem="wPA-Um-Ngo" secondAttribute="bottom" id="hbR-dK-6qQ"/>
-                                    <constraint firstItem="X9V-8G-xxc" firstAttribute="leading" secondItem="2TT-fa-3bE" secondAttribute="leading" id="nsx-kC-rfb"/>
-                                    <constraint firstAttribute="trailing" secondItem="wPA-Um-Ngo" secondAttribute="trailing" id="pXg-Dt-g4Y"/>
-                                    <constraint firstItem="X9V-8G-xxc" firstAttribute="top" secondItem="2TT-fa-3bE" secondAttribute="top" id="qVZ-WC-P1s"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfT-fl-uiC" userLabel="Password repeat Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="220" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nW-ad-u11">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7J-6H-Taj" customClass="InputTextField" customModule="Bike_Share_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstItem="C7J-6H-Taj" firstAttribute="leading" secondItem="hfT-fl-uiC" secondAttribute="leading" id="1yv-rs-dDT"/>
-                                    <constraint firstAttribute="bottom" secondItem="C7J-6H-Taj" secondAttribute="bottom" id="2gE-oA-ytU"/>
-                                    <constraint firstAttribute="trailing" secondItem="C7J-6H-Taj" secondAttribute="trailing" id="7di-Bt-14c"/>
-                                    <constraint firstAttribute="trailing" secondItem="1nW-ad-u11" secondAttribute="trailing" id="Abg-Bq-f7w"/>
-                                    <constraint firstItem="1nW-ad-u11" firstAttribute="leading" secondItem="hfT-fl-uiC" secondAttribute="leading" id="Sut-ar-pu4"/>
-                                    <constraint firstItem="C7J-6H-Taj" firstAttribute="top" secondItem="1nW-ad-u11" secondAttribute="bottom" constant="4" id="UY4-kx-87D"/>
-                                    <constraint firstItem="1nW-ad-u11" firstAttribute="top" secondItem="hfT-fl-uiC" secondAttribute="top" id="wvw-OJ-Can"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-Aw-BdN">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
@@ -438,31 +314,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-JD-Ryk" userLabel="Email Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtr-7a-A74">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nzS-51-y4M">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nzS-51-y4M" secondAttribute="trailing" id="DN2-t4-tnH"/>
-                                    <constraint firstAttribute="bottom" secondItem="nzS-51-y4M" secondAttribute="bottom" id="l0p-gf-pR8"/>
-                                    <constraint firstItem="nzS-51-y4M" firstAttribute="top" secondItem="Gtr-7a-A74" secondAttribute="bottom" constant="4" id="pL8-4W-wzF"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gtr-7a-A74" secondAttribute="trailing" id="pYB-sH-Bjv"/>
-                                    <constraint firstItem="nzS-51-y4M" firstAttribute="leading" secondItem="Lhd-JD-Ryk" secondAttribute="leading" id="uiX-fo-2iL"/>
-                                    <constraint firstItem="Gtr-7a-A74" firstAttribute="leading" secondItem="Lhd-JD-Ryk" secondAttribute="leading" id="y9o-S4-hg5"/>
-                                    <constraint firstItem="Gtr-7a-A74" firstAttribute="top" secondItem="Lhd-JD-Ryk" secondAttribute="top" id="zY3-O7-YQt"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-Th-d5d">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
@@ -528,31 +380,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMC-lF-Co3" userLabel="Password Input" customClass="InputFieldView" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCe-YR-dYS">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-KK-g1A" customClass="InputTextField" customModule="Bike_Share_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24" width="374" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstItem="yCe-YR-dYS" firstAttribute="top" secondItem="sMC-lF-Co3" secondAttribute="top" id="48w-Eg-Z9a"/>
-                                    <constraint firstItem="pXb-KK-g1A" firstAttribute="top" secondItem="yCe-YR-dYS" secondAttribute="bottom" constant="4" id="8ga-Qx-a9l"/>
-                                    <constraint firstAttribute="bottom" secondItem="pXb-KK-g1A" secondAttribute="bottom" id="Ej6-Nx-f2x"/>
-                                    <constraint firstAttribute="trailing" secondItem="pXb-KK-g1A" secondAttribute="trailing" id="dff-u4-Yt1"/>
-                                    <constraint firstItem="pXb-KK-g1A" firstAttribute="leading" secondItem="sMC-lF-Co3" secondAttribute="leading" id="gDP-7N-Bu1"/>
-                                    <constraint firstAttribute="trailing" secondItem="yCe-YR-dYS" secondAttribute="trailing" id="wEI-GW-tD4"/>
-                                    <constraint firstItem="yCe-YR-dYS" firstAttribute="leading" secondItem="sMC-lF-Co3" secondAttribute="leading" id="wcN-Cr-Rcv"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-4G-OCp">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>

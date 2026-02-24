@@ -33,8 +33,14 @@ class InputFieldView: UIView {
 
     private func initTextField() {
         guard let view = loadViewFromNib() else { return }
-        view.frame = bounds
+        view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            view.topAnchor.constraint(equalTo: topAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
         textField.delegate = self
     }
 
