@@ -20,6 +20,7 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .applyDarkListBackground()
             .navigationTitle("Настройки")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -29,6 +30,21 @@ struct SettingsView: View {
                     }
                 }
             }
+        }
+        .preferredColorScheme(.dark)
+    }
+}
+
+private extension View {
+    @ViewBuilder
+    func applyDarkListBackground() -> some View {
+        if #available(iOS 16.0, *) {
+            self
+                .scrollContentBackground(.hidden)
+                .background(Color.black)
+        } else {
+            self
+                .background(Color.black)
         }
     }
 }

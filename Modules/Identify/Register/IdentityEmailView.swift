@@ -58,7 +58,7 @@ class EmailViewController: UIViewController, IdentifyFlowStoreConsuming {
     }
     
     func isEmpty(input: InputFieldView) -> Bool {
-        return input.isInputText()
+        return !input.isInputText()
     }
     
     func isCorrectInput(input: InputFieldView) -> Bool {

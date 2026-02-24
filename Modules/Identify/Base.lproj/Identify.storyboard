@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRK-xV-kCW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRK-xV-kCW" customClass="PrimaryButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="24" y="640" width="366" height="48"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -32,7 +32,7 @@
                                     <segue destination="tVs-i6-VXa" kind="show" id="xuH-cn-T8c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-UI-R01">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-UI-R01" customClass="PrimaryButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="24" y="560" width="366" height="48"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -110,15 +110,16 @@
                                 <rect key="frame" x="20" y="226" width="374" height="58"/>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-jm-ia3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-jm-ia3" customClass="RoundIconButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bp3-TF-6Fj"/>
                                     <constraint firstAttribute="height" constant="50" id="xo4-mB-5fE"/>
+                            <constraint firstItem="XAQ-qm-sDK" firstAttribute="top" secondItem="Ydy-H2-2yg" secondAttribute="bottom" constant="24" id="Z1x-Top-2nd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" backgroundImage="forward" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
                                 <connections>
                                     <action selector="didTapProceedButton" destination="tVs-i6-VXa" eventType="touchUpInside" id="UJJ-QM-jWA"/>
                                     <segue destination="Ifb-V4-yXE" kind="show" id="HFq-9d-8OW"/>
@@ -179,7 +180,7 @@
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-BD-frW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-BD-frW" customClass="RoundIconButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3CV-8P-xsx"/>
@@ -187,7 +188,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" backgroundImage="forward" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
                                 <connections>
                                     <segue destination="HHz-HM-efw" kind="show" id="XJZ-JN-Qmb"/>
                                 </connections>
@@ -237,7 +238,7 @@
                                 <rect key="frame" x="20" y="220" width="374" height="58"/>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-Aw-BdN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-Aw-BdN" customClass="RoundIconButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ciu-tl-Kui"/>
@@ -245,7 +246,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" backgroundImage="forward" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
                                 <connections>
                                     <action selector="didTapProceedButton" destination="DhD-oS-A2d" eventType="touchUpInside" id="Rzb-LS-Lu6"/>
                                 </connections>
@@ -325,7 +326,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" backgroundImage="forward" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
                                 <connections>
                                     <action selector="didbTapProceedButton" destination="Ifb-V4-yXE" eventType="touchUpInside" id="kDr-jT-K3G"/>
                                     <segue destination="DhD-oS-A2d" kind="show" id="9BC-XY-m16"/>
@@ -383,7 +384,7 @@
                                 <rect key="frame" x="20" y="138" width="374" height="58"/>
                                 <color key="backgroundColor" systemColor="darkTextColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-4G-OCp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-4G-OCp" customClass="RoundIconButton" customModule="Bike_Share_App" customModuleProvider="target">
                                 <rect key="frame" x="324" y="648.66666666666663" width="50" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DTB-C3-7al"/>
@@ -391,7 +392,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" backgroundImage="forward" catalog="system"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qhk-5Q-mDv"/>

@@ -41,6 +41,7 @@ class InputFieldView: UIView {
             view.topAnchor.constraint(equalTo: topAnchor),
             view.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+        applyTheme()
         textField.delegate = self
     }
 
@@ -119,6 +120,18 @@ extension InputFieldView {
         super.becomeFirstResponder()
         return textField.becomeFirstResponder()
     }
+
+    private func applyTheme() {
+        label.font = AppTheme.Font.inputLabel
+        label.textColor = AppTheme.Color.accent
+        textField.font = AppTheme.Font.inputText
+        textField.textColor = AppTheme.Color.textPrimary
+        textField.backgroundColor = AppTheme.Color.inputBackground
+        textField.layer.cornerRadius = 8
+        textField.layer.masksToBounds = true
+        errorText.font = AppTheme.Font.error
+        errorText.textColor = AppTheme.Color.error
+    }
 }
 
 private extension UITextField {
@@ -141,17 +154,17 @@ private extension UITextField {
     }
 
     private func setError() {
-        layer.borderColor = UIColor.red.cgColor
+        layer.borderColor = AppTheme.Color.inputBorderError.cgColor
         layer.borderWidth = 1
     }
 
     private func setRegular() {
-        layer.borderColor = UIColor.green.cgColor
+        layer.borderColor = AppTheme.Color.inputBorderRegular.cgColor
         layer.borderWidth = 0
     }
 
     private func setActive() {
-        layer.borderColor = UIColor.green.cgColor
+        layer.borderColor = AppTheme.Color.inputBorderActive.cgColor
         layer.borderWidth = 1
     }
 }
