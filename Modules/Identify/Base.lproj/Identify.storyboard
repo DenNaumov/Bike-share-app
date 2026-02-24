@@ -270,6 +270,7 @@
                     <navigationItem key="navigationItem" id="XLF-xH-TIW"/>
                     <connections>
                         <outlet property="passwordInputView" destination="2TT-fa-3bE" id="PV3-1C-Gua"/>
+                        <outlet property="repeatPasswordInputView" destination="hfT-fl-uiC" id="rpt-1"/>
                         <outlet property="proceedButton" destination="UyY-Aw-BdN" id="c8O-L6-K8B"/>
                     </connections>
                 </viewController>
@@ -364,7 +365,7 @@
         <!--Login Password View Controller-->
         <scene sceneID="o9U-28-33b">
             <objects>
-                <viewController storyboardIdentifier="loginpasswordVC" id="HHz-HM-efw" customClass="LoginPasswordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginpasswordVC" id="HHz-HM-efw" customClass="LoginPasswordViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t1g-mb-2Xa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,6 +408,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8px-Eg-zl5"/>
+                    <connections>
+                        <outlet property="passwordInputView" destination="sMC-lF-Co3" id="lPw-Fa-1bN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LfB-QH-NuT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

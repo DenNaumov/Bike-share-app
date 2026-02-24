@@ -90,6 +90,10 @@ extension InputFieldView {
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
     }
+
+    func setTextContentType(_ type: UITextContentType?) {
+        textField.textContentType = type
+    }
     
     func getText() -> String? {
         return textField.text

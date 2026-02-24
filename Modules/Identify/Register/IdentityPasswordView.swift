@@ -11,6 +11,7 @@ import UIKit
 class PasswordViewController: UIViewController, IdentifyFlowStoreConsuming {
 
     @IBOutlet weak var passwordInputView: InputFieldView!
+    @IBOutlet weak var repeatPasswordInputView: InputFieldView!
     @IBOutlet weak var proceedButton: UIButton!
     var flowStore: IdentifyFlowStore?
 
@@ -18,7 +19,14 @@ class PasswordViewController: UIViewController, IdentifyFlowStoreConsuming {
         super.viewDidLoad()
         passwordInputView.setLabel(text: "Password")
         passwordInputView.hideTextEntry()
+        passwordInputView.setTextContentType(.newPassword)
+
+        repeatPasswordInputView.setLabel(text: "Repeat password")
+        repeatPasswordInputView.hideTextEntry()
+        repeatPasswordInputView.setTextContentType(.newPassword)
+
         passwordInputView.returnDelegate = self
+        repeatPasswordInputView.returnDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,7 +69,12 @@ extension PasswordViewController: InputFieldDelegate {
     }
 
     func textFieldReturn(_ input: InputFieldView) {
-        passwordInputView.resignFirstResponder()
-        proceedButton.sendActions(for: .touchUpInside)
+        if input == passwordInputView {
+            passwordInputView.resignFirstResponder()
+            repeatPasswordInputView.becomeFirstResponder()
+        } else {
+            repeatPasswordInputView.resignFirstResponder()
+            proceedButton.sendActions(for: .touchUpInside)
+        }
     }
 }
