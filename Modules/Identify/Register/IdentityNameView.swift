@@ -8,20 +8,18 @@
 
 import UIKit
 
-class NameViewController: UIViewController {
+class NameViewController: UIViewController, IdentifyFlowStoreConsuming {
 
     @IBOutlet weak var firstNameInputView: InputFieldView!
     @IBOutlet weak var secondNameInputView: InputFieldView!
     @IBOutlet weak var proceedButton: UIButton!
 
-    weak var vm: IdentifyViewModel? = nil
+    var flowStore: IdentifyFlowStore?
+    private weak var viewModel: IdentifyViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let nc = navigationController as? IdentifyNavigationController {
-            vm = nc.viewModel
-        }
+        viewModel = flowStore?.viewModel
         setupInputFields()
     }
 
@@ -41,6 +39,12 @@ class NameViewController: UIViewController {
         super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
         let isTransitionAllowed = isTransitionAllowed()
         return isTransitionAllowed
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let flowStore = flowStore {
+            flowStore.inject(into: segue.destination)
+        }
     }
 
     @IBAction func didTapProceedButton() {

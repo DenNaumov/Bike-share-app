@@ -11,6 +11,7 @@
 		9208F2B526FCB9C800382CDB /* Profile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9208F2B426FCB9C800382CDB /* Profile.xib */; };
 		9208F2B726FCBB6700382CDB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208F2B626FCBB6700382CDB /* Profile.swift */; };
 		9208F2B926FCC19300382CDB /* IdentifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208F2B826FCC19300382CDB /* IdentifyViewModel.swift */; };
+		92E8F9112B4F1A2B0078E9F0 /* IdentifyFlowStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F9102B4F1A2B0078E9F0 /* IdentifyFlowStore.swift */; };
 		9208F2BB26FE000700382CDB /* IdentifyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208F2BA26FE000700382CDB /* IdentifyNavigationController.swift */; };
 		9208F2BD26FF5B8600382CDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9208F2BC26FF5B8600382CDB /* Home.storyboard */; };
 		9208F2BF26FF5C4F00382CDB /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208F2BE26FF5C4F00382CDB /* RootRouter.swift */; };
@@ -38,6 +39,7 @@
 		9208F2B426FCB9C800382CDB /* Profile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Profile.xib; sourceTree = "<group>"; };
 		9208F2B626FCBB6700382CDB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9208F2B826FCC19300382CDB /* IdentifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyViewModel.swift; sourceTree = "<group>"; };
+		92E8F9102B4F1A2B0078E9F0 /* IdentifyFlowStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyFlowStore.swift; sourceTree = "<group>"; };
 		9208F2BA26FE000700382CDB /* IdentifyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyNavigationController.swift; sourceTree = "<group>"; };
 		9208F2BC26FF5B8600382CDB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9208F2BE26FF5C4F00382CDB /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				92F44FB426FB00DC0005E884 /* Register */,
 				929423A124F2912B008B6B28 /* Identify.storyboard */,
 				9208F2BA26FE000700382CDB /* IdentifyNavigationController.swift */,
+				92E8F9102B4F1A2B0078E9F0 /* IdentifyFlowStore.swift */,
 				9208F2B826FCC19300382CDB /* IdentifyViewModel.swift */,
 				9294239F24F2912B008B6B28 /* IdentifyViewController.swift */,
 			);
@@ -310,6 +313,7 @@
 				929423A024F2912B008B6B28 /* IdentifyViewController.swift in Sources */,
 				9208F2BF26FF5C4F00382CDB /* RootRouter.swift in Sources */,
 				9208F2B926FCC19300382CDB /* IdentifyViewModel.swift in Sources */,
+				92E8F9112B4F1A2B0078E9F0 /* IdentifyFlowStore.swift in Sources */,
 				9294239C24F2912B008B6B28 /* AppDelegate.swift in Sources */,
 				9208F2BB26FE000700382CDB /* IdentifyNavigationController.swift in Sources */,
 				9294239E24F2912B008B6B28 /* SceneDelegate.swift in Sources */,

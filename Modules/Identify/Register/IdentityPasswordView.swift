@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PasswordViewController: UIViewController {
+class PasswordViewController: UIViewController, IdentifyFlowStoreConsuming {
 
     @IBOutlet weak var passwordInputView: InputFieldView!
     @IBOutlet weak var proceedButton: UIButton!
+    var flowStore: IdentifyFlowStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()

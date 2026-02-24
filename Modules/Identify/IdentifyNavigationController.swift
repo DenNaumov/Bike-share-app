@@ -9,15 +9,4 @@
 import UIKit
 
 class IdentifyNavigationController: UINavigationController {
-
-    var viewModel: IdentifyViewModel
-
-    required init?(coder: NSCoder) {
-        viewModel = IdentifyViewModel()
-        super.init(coder: coder)
-    }
-
-    func initiateIndetifyVC() {
-        viewModel = IdentifyViewModel()
-    }
 }

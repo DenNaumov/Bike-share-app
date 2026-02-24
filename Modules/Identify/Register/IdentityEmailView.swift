@@ -8,12 +8,13 @@
 
 import UIKit
 
-class EmailViewController: UIViewController {
+class EmailViewController: UIViewController, IdentifyFlowStoreConsuming {
 
     @IBOutlet weak var emailInputView: InputFieldView!
     @IBOutlet weak var proceedButton: UIButton!
     
     let viewModel = EmailViewModel()
+    var flowStore: IdentifyFlowStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,12 @@ class EmailViewController: UIViewController {
             return false
         }
         return true
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let flowStore = flowStore {
+            flowStore.inject(into: segue.destination)
+        }
     }
 
     @IBAction func didbTapProceedButton() {

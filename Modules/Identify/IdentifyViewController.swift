@@ -9,10 +9,15 @@
 import UIKit
 import SwiftUI
 
-class IdentifyViewController: UIViewController {
+class IdentifyViewController: UIViewController, IdentifyFlowStoreConsuming {
+
+    var flowStore: IdentifyFlowStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if flowStore == nil {
+            flowStore = IdentifyFlowStore()
+        }
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Настройки",
             style: .plain,
@@ -38,6 +43,9 @@ class IdentifyViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let flowStore = flowStore {
+            flowStore.inject(into: segue.destination)
+        }
     }
 
     @IBAction func didTapRegisterButton() {
