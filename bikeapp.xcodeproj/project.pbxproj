@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92E8F9502B4F8B1B0078E9F0 /* LoginNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F94F2B4F8B1B0078E9F0 /* LoginNameViewController.swift */; };
+		92E8F9402B4F7E030078E9F0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F93F2B4F7E030078E9F0 /* AuthService.swift */; };
 		92E8F9302B4F6A1E0078E9F0 /* RoundIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F92F2B4F6A1E0078E9F0 /* RoundIconButton.swift */; };
 		92E8F9202B4F4D120078E9F0 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F91F2B4F4D120078E9F0 /* AppTheme.swift */; };
 		92E8F9222B4F4D220078E9F0 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8F9212B4F4D220078E9F0 /* PrimaryButton.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92E8F94F2B4F8B1B0078E9F0 /* LoginNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNameViewController.swift; sourceTree = "<group>"; };
+		92E8F93F2B4F7E030078E9F0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		92E8F92F2B4F6A1E0078E9F0 /* RoundIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundIconButton.swift; sourceTree = "<group>"; };
 		92E8F91F2B4F4D120078E9F0 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		92E8F9212B4F4D220078E9F0 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -124,9 +128,11 @@
 			children = (
 				92F44FB426FB00DC0005E884 /* Register */,
 				929423A124F2912B008B6B28 /* Identify.storyboard */,
+				92E8F93F2B4F7E030078E9F0 /* AuthService.swift */,
 				9208F2BA26FE000700382CDB /* IdentifyNavigationController.swift */,
 				92E8F9102B4F1A2B0078E9F0 /* IdentifyFlowStore.swift */,
 				9208F2B826FCC19300382CDB /* IdentifyViewModel.swift */,
+				92E8F94F2B4F8B1B0078E9F0 /* LoginNameViewController.swift */,
 				92E8F9132B4F2C220078E9F0 /* LoginPasswordViewController.swift */,
 				9294239F24F2912B008B6B28 /* IdentifyViewController.swift */,
 			);
@@ -323,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E8F9502B4F8B1B0078E9F0 /* LoginNameViewController.swift in Sources */,
+				92E8F9402B4F7E030078E9F0 /* AuthService.swift in Sources */,
 				92E8F9302B4F6A1E0078E9F0 /* RoundIconButton.swift in Sources */,
 				92E8F9202B4F4D120078E9F0 /* AppTheme.swift in Sources */,
 				92E8F9222B4F4D220078E9F0 /* PrimaryButton.swift in Sources */,

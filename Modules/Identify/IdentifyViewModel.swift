@@ -44,4 +44,8 @@ class IdentifyViewModel: NSObject {
     func updateValue(for item: InputItem, text: String) {
         store.set(text, for: item)
     }
+
+    func value(for item: InputItem) -> String? {
+        store.value(for: item)
+    }
 }

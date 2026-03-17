@@ -1,47 +1,42 @@
 //
-//  EmailViewController.swift
-//  bikeapp
+//  LoginNameViewController.swift
+//  Bike App
 //
-//  Created by Денис Наумов on 25.08.2020.
-//  Copyright © 2020 Денис Наумов. All rights reserved.
+//  Created by Denis on 24.02.2026.
 //
 
 import UIKit
 
-class EmailViewController: UIViewController, IdentifyFlowStoreConsuming {
+final class LoginNameViewController: UIViewController, IdentifyFlowStoreConsuming {
 
-    @IBOutlet weak var emailInputView: InputFieldView!
-    @IBOutlet weak var proceedButton: UIButton!
-    
-    let viewModel = EmailViewModel()
+    @IBOutlet private weak var emailInputView: InputFieldView!
+    @IBOutlet private weak var proceedButton: UIButton!
+
     var flowStore: IdentifyFlowStore?
-
-    private var identifyViewModel: IdentifyViewModel? {
-        flowStore?.viewModel
-    }
+    private let emailValidator = EmailViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         emailInputView.setLabel(text: "E-mail")
-        emailInputView.returnDelegate = self
         emailInputView.setKeyboardType(.emailAddress)
+        emailInputView.returnDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         emailInputView.becomeFirstResponder()
     }
-    
+
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
-        
+
         if let error = getInputValidationError() {
             emailInputView.setError(text: error)
             return false
         }
+
         if let email = emailInputView.getText() {
-            identifyViewModel?.updateValue(for: .email, text: email)
+            flowStore?.viewModel.updateValue(for: .email, text: email)
         }
         return true
     }
@@ -52,9 +47,6 @@ class EmailViewController: UIViewController, IdentifyFlowStoreConsuming {
         }
     }
 
-    @IBAction func didbTapProceedButton() {
-    }
-
     private func getInputValidationError() -> String? {
         if isEmpty(input: emailInputView) {
             return "Email is empty"
@@ -63,35 +55,26 @@ class EmailViewController: UIViewController, IdentifyFlowStoreConsuming {
         }
         return nil
     }
-    
-    func isEmpty(input: InputFieldView) -> Bool {
+
+    private func isEmpty(input: InputFieldView) -> Bool {
         return !input.isInputText()
     }
-    
-    func isCorrectInput(input: InputFieldView) -> Bool {
-        guard let emailText = emailInputView?.getText(), !emailText.isEmpty else { return false }
-        return viewModel.isValidEmail(emailText)
+
+    private func isCorrectInput(input: InputFieldView) -> Bool {
+        guard let emailText = emailInputView.getText(), !emailText.isEmpty else { return false }
+        return emailValidator.isValidEmail(emailText)
     }
 }
 
-extension EmailViewController: InputFieldDelegate {
+extension LoginNameViewController: InputFieldDelegate {
     func onTextChange(newValue: String) {
         if let email = emailInputView.getText() {
-            identifyViewModel?.updateValue(for: .email, text: email)
+            flowStore?.viewModel.updateValue(for: .email, text: email)
         }
     }
 
     func textFieldReturn(_ input: InputFieldView) {
         input.resignFirstResponder()
         proceedButton.sendActions(for: .touchUpInside)
-    }
-}
-
-class EmailViewModel {
-    
-    func isValidEmail(_ email: String) -> Bool {
-        let emailPattern = "[A-Za-z0-9._%+-]{2,24}@[A-Za-z0-9.-]{2,24}\\.[A-Za-z]{2,24}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailPattern)
-        return emailPredicate.evaluate(with: email)
     }
 }

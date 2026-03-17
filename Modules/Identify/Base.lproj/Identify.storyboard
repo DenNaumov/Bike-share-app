@@ -115,7 +115,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="bp3-TF-6Fj"/>
                                     <constraint firstAttribute="height" constant="50" id="xo4-mB-5fE"/>
-                            <constraint firstItem="XAQ-qm-sDK" firstAttribute="top" secondItem="Ydy-H2-2yg" secondAttribute="bottom" constant="24" id="Z1x-Top-2nd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
@@ -146,6 +145,7 @@
                             <constraint firstItem="Ydy-H2-2yg" firstAttribute="leading" secondItem="ZVF-O2-nIX" secondAttribute="leading" constant="20" id="amE-Ir-vui"/>
                             <constraint firstItem="ZVF-O2-nIX" firstAttribute="trailing" secondItem="Ydy-H2-2yg" secondAttribute="trailing" constant="20" id="c53-Wy-e7U"/>
                             <constraint firstItem="XAQ-qm-sDK" firstAttribute="leading" secondItem="ZVF-O2-nIX" secondAttribute="leading" constant="20" id="tEq-bk-iBe"/>
+                            <constraint firstItem="XAQ-qm-sDK" firstAttribute="top" secondItem="Ydy-H2-2yg" secondAttribute="bottom" constant="24" id="Z1x-Top-2nd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="QU7-6j-8sX"/>
@@ -162,7 +162,7 @@
         <!--Login Name View Controller-->
         <scene sceneID="GF0-Fq-7to">
             <objects>
-                <viewController storyboardIdentifier="loginemailVC" id="1RI-Mp-GLN" customClass="LoginNameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginemailVC" id="1RI-Mp-GLN" customClass="LoginNameViewController" customModule="Bike_Share_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZw-gt-EYn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,10 +189,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
                                 <state key="normal" backgroundImage="chevron.right" catalog="system"/>
-                                <connections>
-                                    <segue destination="HHz-HM-efw" kind="show" id="XJZ-JN-Qmb"/>
-                                </connections>
-                            </button>
+                                </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7DN-Hb-wLc"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,6 +205,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="owO-UL-Pvs"/>
+                    <connections>
+                        <outlet property="emailInputView" destination="hN9-CA-lDB" id="lgn-em-1"/>
+                        <outlet property="proceedButton" destination="d2l-BD-frW" id="lgn-btn-1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLW-kn-zIo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,6 +394,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <size key="titleShadowOffset" width="4" height="0.0"/>
                                 <state key="normal" backgroundImage="chevron.right" catalog="system"/>
+                                                            <connections>
+                                    <action selector="didTapProceedButton" destination="HHz-HM-efw" eventType="touchUpInside" id="lgn-Act-1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qhk-5Q-mDv"/>

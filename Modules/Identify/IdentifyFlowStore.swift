@@ -14,9 +14,11 @@ protocol IdentifyFlowStoreConsuming: AnyObject {
 
 final class IdentifyFlowStore {
     let viewModel: IdentifyViewModel
+    let authService: AuthService
 
-    init(viewModel: IdentifyViewModel = IdentifyViewModel()) {
+    init(viewModel: IdentifyViewModel = IdentifyViewModel(), authService: AuthService = AuthService()) {
         self.viewModel = viewModel
+        self.authService = authService
     }
 
     func inject(into destination: UIViewController) {

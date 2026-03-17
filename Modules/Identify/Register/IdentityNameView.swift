@@ -48,6 +48,13 @@ class NameViewController: UIViewController, IdentifyFlowStoreConsuming {
     }
 
     @IBAction func didTapProceedButton() {
+        guard let viewModel = viewModel else { return }
+        if let firstName = firstNameInputView.getText() {
+            viewModel.updateValue(for: .firstName, text: firstName)
+        }
+        if let lastName = secondNameInputView.getText() {
+            viewModel.updateValue(for: .lastName, text: lastName)
+        }
     }
 
     private func isTransitionAllowed() -> Bool {
